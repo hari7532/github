@@ -1,0 +1,261 @@
+Using username "ec2-user".
+Authenticating with public key "imported-openssh-key" from agent
+
+       __|  __|_  )
+       _|  (     /   Amazon Linux 2 AMI
+      ___|\___|___|
+
+https://aws.amazon.com/amazon-linux-2/
+3 package(s) needed for security, out of 15 available
+Run "sudo yum update" to apply all updates.
+[ec2-user@ip-172-31-93-16 ~]$ sudo su -
+[root@ip-172-31-93-16 ~]# hostnamectl set-hostname git
+[root@ip-172-31-93-16 ~]# bash
+[root@git ~]# yum install git -y
+Loaded plugins: extras_suggestions, langpacks, priorities, update-motd
+amzn2-core                                            | 3.7 kB     00:00
+Resolving Dependencies
+--> Running transaction check
+---> Package git.x86_64 0:2.32.0-1.amzn2.0.1 will be installed
+--> Processing Dependency: perl-Git = 2.32.0-1.amzn2.0.1 for package: git-2.3 2.0-1.amzn2.0.1.x86_64
+--> Processing Dependency: git-core-doc = 2.32.0-1.amzn2.0.1 for package: git -2.32.0-1.amzn2.0.1.x86_64
+--> Processing Dependency: git-core = 2.32.0-1.amzn2.0.1 for package: git-2.3 2.0-1.amzn2.0.1.x86_64
+--> Processing Dependency: emacs-filesystem >= 27.1 for package: git-2.32.0-1 .amzn2.0.1.x86_64
+--> Processing Dependency: perl(Term::ReadKey) for package: git-2.32.0-1.amzn 2.0.1.x86_64
+--> Processing Dependency: perl(Git::I18N) for package: git-2.32.0-1.amzn2.0. 1.x86_64
+--> Processing Dependency: perl(Git) for package: git-2.32.0-1.amzn2.0.1.x86_ 64
+--> Running transaction check
+---> Package emacs-filesystem.noarch 1:27.2-4.amzn2.0.1 will be installed
+---> Package git-core.x86_64 0:2.32.0-1.amzn2.0.1 will be installed
+---> Package git-core-doc.noarch 0:2.32.0-1.amzn2.0.1 will be installed
+---> Package perl-Git.noarch 0:2.32.0-1.amzn2.0.1 will be installed
+--> Processing Dependency: perl(Error) for package: perl-Git-2.32.0-1.amzn2.0 .1.noarch
+---> Package perl-TermReadKey.x86_64 0:2.30-20.amzn2.0.2 will be installed
+--> Running transaction check
+---> Package perl-Error.noarch 1:0.17020-2.amzn2 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+=============================================================================
+ Package              Arch       Version                Repository      Size
+=============================================================================
+Installing:
+ git                  x86_64     2.32.0-1.amzn2.0.1     amzn2-core     126 k
+Installing for dependencies:
+ emacs-filesystem     noarch     1:27.2-4.amzn2.0.1     amzn2-core      67 k
+ git-core             x86_64     2.32.0-1.amzn2.0.1     amzn2-core     4.8 M
+ git-core-doc         noarch     2.32.0-1.amzn2.0.1     amzn2-core     2.7 M
+ perl-Error           noarch     1:0.17020-2.amzn2      amzn2-core      32 k
+ perl-Git             noarch     2.32.0-1.amzn2.0.1     amzn2-core      43 k
+ perl-TermReadKey     x86_64     2.30-20.amzn2.0.2      amzn2-core      31 k
+
+Transaction Summary
+=============================================================================
+Install  1 Package (+6 Dependent packages)
+
+Total download size: 7.8 M
+Installed size: 38 M
+Downloading packages:
+(1/7): emacs-filesystem-27.2-4.amzn2.0.1.noarch.rpm     |  67 kB   00:00
+(2/7): git-2.32.0-1.amzn2.0.1.x86_64.rpm                | 126 kB   00:00
+(3/7): git-core-2.32.0-1.amzn2.0.1.x86_64.rpm           | 4.8 MB   00:00
+(4/7): git-core-doc-2.32.0-1.amzn2.0.1.noarch.rpm       | 2.7 MB   00:00
+(5/7): perl-Error-0.17020-2.amzn2.noarch.rpm            |  32 kB   00:00
+(6/7): perl-Git-2.32.0-1.amzn2.0.1.noarch.rpm           |  43 kB   00:00
+(7/7): perl-TermReadKey-2.30-20.amzn2.0.2.x86_64.rpm    |  31 kB   00:00
+-----------------------------------------------------------------------------
+Total                                            18 MB/s | 7.8 MB  00:00
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : git-core-2.32.0-1.amzn2.0.1.x86_64                        1/7
+  Installing : git-core-doc-2.32.0-1.amzn2.0.1.noarch                    2/7
+  Installing : 1:perl-Error-0.17020-2.amzn2.noarch                       3/7
+  Installing : 1:emacs-filesystem-27.2-4.amzn2.0.1.noarch                4/7
+  Installing : perl-TermReadKey-2.30-20.amzn2.0.2.x86_64                 5/7
+  Installing : perl-Git-2.32.0-1.amzn2.0.1.noarch                        6/7
+  Installing : git-2.32.0-1.amzn2.0.1.x86_64                             7/7
+  Verifying  : perl-TermReadKey-2.30-20.amzn2.0.2.x86_64                 1/7
+  Verifying  : git-core-doc-2.32.0-1.amzn2.0.1.noarch                    2/7
+  Verifying  : perl-Git-2.32.0-1.amzn2.0.1.noarch                        3/7
+  Verifying  : 1:emacs-filesystem-27.2-4.amzn2.0.1.noarch                4/7
+  Verifying  : git-2.32.0-1.amzn2.0.1.x86_64                             5/7
+  Verifying  : git-core-2.32.0-1.amzn2.0.1.x86_64                        6/7
+  Verifying  : 1:perl-Error-0.17020-2.amzn2.noarch                       7/7
+
+Installed:
+  git.x86_64 0:2.32.0-1.amzn2.0.1
+
+Dependency Installed:
+  emacs-filesystem.noarch 1:27.2-4.amzn2.0.1
+  git-core.x86_64 0:2.32.0-1.amzn2.0.1
+  git-core-doc.noarch 0:2.32.0-1.amzn2.0.1
+  perl-Error.noarch 1:0.17020-2.amzn2
+  perl-Git.noarch 0:2.32.0-1.amzn2.0.1
+  perl-TermReadKey.x86_64 0:2.30-20.amzn2.0.2
+
+Complete!
+[root@git ~]# git -v
+unknown option: -v
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare ]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           [--super-prefix=<path>] [--config-env=<name>=<envvar>]
+           <command> [<args>]
+[root@git ~]# git -version
+unknown option: -version
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare ]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           [--super-prefix=<path>] [--config-env=<name>=<envvar>]
+           <command> [<args>]
+[root@git ~]# git --version
+git version 2.32.0
+[root@git ~]# git clone https://github.com/hari7532/github.git
+Cloning into 'github'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (3/3), done.
+[root@git ~]# ls -l
+total 0
+drwxr-xr-x 3 root root 35 Oct 25 12:11 github
+[root@git ~]# ls -l github/
+total 4
+-rw-r--r-- 1 root root 16 Oct 25 12:11 README.md
+[root@git ~]# cd github/
+[root@git github]# ls -l
+total 4
+-rw-r--r-- 1 root root 16 Oct 25 12:11 README.md
+[root@git github]# touch test1 test2 test3 test(4..10)
+bash: syntax error near unexpected token `('
+[root@git github]# touch test1 test2 test3 test4..10
+[root@git github]# ls -l
+total 4
+-rw-r--r-- 1 root root 16 Oct 25 12:11 README.md
+-rw-r--r-- 1 root root  0 Oct 25 12:17 test1
+-rw-r--r-- 1 root root  0 Oct 25 12:17 test2
+-rw-r--r-- 1 root root  0 Oct 25 12:17 test3
+-rw-r--r-- 1 root root  0 Oct 25 12:17 test4..10
+[root@git github]# git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        test1
+        test2
+        test3
+        test4..10
+
+nothing added to commit but untracked files present (use "git add" to track)
+[root@git github]# git delete test4..10
+git: 'delete' is not a git command. See 'git --help'.
+[root@git github]# git --help
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare ]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           [--super-prefix=<path>] [--config-env=<name>=<envvar>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone             Clone a repository into a new directory
+   init              Create an empty Git repository or reinitialize an existi ng one
+
+work on the current change (see also: git help everyday)
+   add               Add file contents to the index
+   mv                Move or rename a file, a directory, or a symlink
+   restore           Restore working tree files
+   rm                Remove files from the working tree and from the index
+   sparse-checkout   Initialize and modify the sparse-checkout
+
+examine the history and state (see also: git help revisions)
+   bisect            Use binary search to find the commit that introduced a b ug
+   diff              Show changes between commits, commit and working tree, e tc
+   grep              Print lines matching a pattern
+   log               Show commit logs
+   show              Show various types of objects
+   status            Show the working tree status
+
+grow, mark and tweak your common history
+   branch            List, create, or delete branches
+   commit            Record changes to the repository
+   merge             Join two or more development histories together
+   rebase            Reapply commits on top of another base tip
+   reset             Reset current HEAD to the specified state
+   switch            Switch branches
+   tag               Create, list, delete or verify a tag object signed with  GPG
+
+collaborate (see also: git help workflows)
+   fetch             Download objects and refs from another repository
+   pull              Fetch from and integrate with another repository or a lo cal branch
+   push              Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+See 'git help git' for an overview of the system.
+[root@git github]# git add test1 and test2 test3 test4..10
+fatal: pathspec 'and' did not match any files
+[root@git github]# git add test1 test2 test3 test4..10
+[root@git github]# git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   test1
+        new file:   test2
+        new file:   test3
+        new file:   test4..10
+
+[root@git github]# git commit -m "testing git"
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'root@git.(none)')
+[root@git github]# git config --global user.email "harivardhan7532@gmail.com"
+[root@git github]# git config --global user.name "hari7532"
+[root@git github]# git commit -m "testing git"
+[master 326bcfd] testing git
+ 4 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 test1
+ create mode 100644 test2
+ create mode 100644 test3
+ create mode 100644 test4..10
+[root@git github]# git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+[root@git github]# git push origin github
+error: src refspec github does not match any
+error: failed to push some refs to 'https://github.com/hari7532/github.git'
+[root@git github]# git push origin master
+Username for 'https://github.com': hari7532
+Password for 'https://hari7532@github.com':
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 286 bytes | 286.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/hari7532/github.git
+   c32ac5e..326bcfd  master -> master
+[root@git github]#
