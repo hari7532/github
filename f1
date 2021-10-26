@@ -1,0 +1,184 @@
+Using username "ec2-user".
+Authenticating with public key "imported-openssh-key" from agent
+Last login: Mon Oct  4 01:53:23 2021 from bba404808.alshamil.net.ae
+
+       __|  __|_  )
+       _|  (     /   Amazon Linux 2 AMI
+      ___|\___|___|
+
+https://aws.amazon.com/amazon-linux-2/
+11 package(s) needed for security, out of 37 available
+Run "sudo yum update" to apply all updates.
+[ec2-user@packer ~]$ sudo su -
+Last login: Mon Oct  4 01:53:25 UTC 2021 on pts/0
+[root@packer ~]# hostnamectl set-hostname git
+[root@packer ~]# bash
+[root@git ~]#
+[root@git ~]# git clone https://github.com/shan5a6/dvsbatch3.git
+bash: git: command not found
+[root@git ~]# yum install git -y
+Loaded plugins: extras_suggestions, langpacks, priorities, update-motd
+amzn2-core                                                                                         | 3.7 kB  00:00:00
+209 packages excluded due to repository priority protections
+Resolving Dependencies
+--> Running transaction check
+---> Package git.x86_64 0:2.32.0-1.amzn2.0.1 will be installed
+--> Processing Dependency: perl-Git = 2.32.0-1.amzn2.0.1 for package: git-2.32.0-1.amzn2.0.1.x86_64
+--> Processing Dependency: git-core-doc = 2.32.0-1.amzn2.0.1 for package: git-2.32.0-1.amzn2.0.1.x86_64
+--> Processing Dependency: git-core = 2.32.0-1.amzn2.0.1 for package: git-2.32.0-1.amzn2.0.1.x86_64
+--> Processing Dependency: emacs-filesystem >= 27.1 for package: git-2.32.0-1.amzn2.0.1.x86_64
+--> Processing Dependency: perl(Term::ReadKey) for package: git-2.32.0-1.amzn2.0.1.x86_64
+--> Processing Dependency: perl(Git::I18N) for package: git-2.32.0-1.amzn2.0.1.x86_64
+--> Processing Dependency: perl(Git) for package: git-2.32.0-1.amzn2.0.1.x86_64
+--> Running transaction check
+---> Package emacs-filesystem.noarch 1:27.2-4.amzn2.0.1 will be installed
+---> Package git-core.x86_64 0:2.32.0-1.amzn2.0.1 will be installed
+---> Package git-core-doc.noarch 0:2.32.0-1.amzn2.0.1 will be installed
+---> Package perl-Git.noarch 0:2.32.0-1.amzn2.0.1 will be installed
+--> Processing Dependency: perl(Error) for package: perl-Git-2.32.0-1.amzn2.0.1.noarch
+---> Package perl-TermReadKey.x86_64 0:2.30-20.amzn2.0.2 will be installed
+--> Running transaction check
+---> Package perl-Error.noarch 1:0.17020-2.amzn2 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+==========================================================================================================================
+ Package                         Arch                  Version                            Repository                 Size
+==========================================================================================================================
+Installing:
+ git                             x86_64                2.32.0-1.amzn2.0.1                 amzn2-core                126 k
+Installing for dependencies:
+ emacs-filesystem                noarch                1:27.2-4.amzn2.0.1                 amzn2-core                 67 k
+ git-core                        x86_64                2.32.0-1.amzn2.0.1                 amzn2-core                4.8 M
+ git-core-doc                    noarch                2.32.0-1.amzn2.0.1                 amzn2-core                2.7 M
+ perl-Error                      noarch                1:0.17020-2.amzn2                  amzn2-core                 32 k
+ perl-Git                        noarch                2.32.0-1.amzn2.0.1                 amzn2-core                 43 k
+ perl-TermReadKey                x86_64                2.30-20.amzn2.0.2                  amzn2-core                 31 k
+
+Transaction Summary
+==========================================================================================================================
+Install  1 Package (+6 Dependent packages)
+
+Total download size: 7.8 M
+Installed size: 38 M
+Downloading packages:
+(1/7): emacs-filesystem-27.2-4.amzn2.0.1.noarch.rpm                                                |  67 kB  00:00:00
+(2/7): git-2.32.0-1.amzn2.0.1.x86_64.rpm                                                           | 126 kB  00:00:00
+(3/7): git-core-2.32.0-1.amzn2.0.1.x86_64.rpm                                                      | 4.8 MB  00:00:00
+(4/7): git-core-doc-2.32.0-1.amzn2.0.1.noarch.rpm                                                  | 2.7 MB  00:00:00
+(5/7): perl-Error-0.17020-2.amzn2.noarch.rpm                                                       |  32 kB  00:00:00
+(6/7): perl-Git-2.32.0-1.amzn2.0.1.noarch.rpm                                                      |  43 kB  00:00:00
+(7/7): perl-TermReadKey-2.30-20.amzn2.0.2.x86_64.rpm                                               |  31 kB  00:00:00
+--------------------------------------------------------------------------------------------------------------------------
+Total                                                                                      30 MB/s | 7.8 MB  00:00:00
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : git-core-2.32.0-1.amzn2.0.1.x86_64                                                                     1/7
+  Installing : git-core-doc-2.32.0-1.amzn2.0.1.noarch                                                                 2/7
+  Installing : 1:perl-Error-0.17020-2.amzn2.noarch                                                                    3/7
+  Installing : 1:emacs-filesystem-27.2-4.amzn2.0.1.noarch                                                             4/7
+  Installing : perl-TermReadKey-2.30-20.amzn2.0.2.x86_64                                                              5/7
+  Installing : perl-Git-2.32.0-1.amzn2.0.1.noarch                                                                     6/7
+  Installing : git-2.32.0-1.amzn2.0.1.x86_64                                                                          7/7
+  Verifying  : perl-TermReadKey-2.30-20.amzn2.0.2.x86_64                                                              1/7
+  Verifying  : git-core-doc-2.32.0-1.amzn2.0.1.noarch                                                                 2/7
+  Verifying  : perl-Git-2.32.0-1.amzn2.0.1.noarch                                                                     3/7
+  Verifying  : 1:emacs-filesystem-27.2-4.amzn2.0.1.noarch                                                             4/7
+  Verifying  : git-2.32.0-1.amzn2.0.1.x86_64                                                                          5/7
+  Verifying  : git-core-2.32.0-1.amzn2.0.1.x86_64                                                                     6/7
+  Verifying  : 1:perl-Error-0.17020-2.amzn2.noarch                                                                    7/7
+
+Installed:
+  git.x86_64 0:2.32.0-1.amzn2.0.1
+
+Dependency Installed:
+  emacs-filesystem.noarch 1:27.2-4.amzn2.0.1                  git-core.x86_64 0:2.32.0-1.amzn2.0.1
+  git-core-doc.noarch 0:2.32.0-1.amzn2.0.1                    perl-Error.noarch 1:0.17020-2.amzn2
+  perl-Git.noarch 0:2.32.0-1.amzn2.0.1                        perl-TermReadKey.x86_64 0:2.30-20.amzn2.0.2
+
+Complete!
+[root@git ~]# git clone https://github.com/shan5a6/dvsbatch3.git
+Cloning into 'dvsbatch3'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (3/3), done.
+[root@git ~]# ls -l dvsbatch3/
+total 4
+-rw-r--r-- 1 root root 11 Oct  4 03:21 README.md
+[root@git ~]# cd dvsbatch3/
+[root@git dvsbatch3]# ls -l
+total 4
+-rw-r--r-- 1 root root 11 Oct  4 03:21 README.md
+[root@git dvsbatch3]# touch test1 test2
+[root@git dvsbatch3]# ls -l
+total 4
+-rw-r--r-- 1 root root 11 Oct  4 03:21 README.md
+-rw-r--r-- 1 root root  0 Oct  4 03:21 test1
+-rw-r--r-- 1 root root  0 Oct  4 03:21 test2
+[root@git dvsbatch3]# git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        test1
+        test2
+
+nothing added to commit but untracked files present (use "git add" to track)
+[root@git dvsbatch3]# git add test1 test2
+[root@git dvsbatch3]# git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   test1
+        new file:   test2
+
+[root@git dvsbatch3]# git commit -m "testing git"
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'root@git.(none)')
+[root@git dvsbatch3]# git config --global user.email "shahan.aix@gmail.com"
+[root@git dvsbatch3]# git config --global user.name "shan5a6"
+[root@git dvsbatch3]# git commit -m "testing git"
+[master 6c0072d] testing git
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 test1
+ create mode 100644 test2
+[root@git dvsbatch3]# git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+[root@git dvsbatch3]# ls -l
+total 4
+-rw-r--r-- 1 root root 11 Oct  4 03:21 README.md
+-rw-r--r-- 1 root root  0 Oct  4 03:21 test1
+-rw-r--r-- 1 root root  0 Oct  4 03:21 test2
+[root@git dvsbatch3]# git push origin master
+Username for 'https://github.com': shan5a6
+Password for 'https://shan5a6@github.com':
+[root@git dvsbatch3]# git push origin master
+Username for 'https://github.com': shan5a6
+Password for 'https://shan5a6@github.com':
+remote: Support for password authentication was removed on August 13, 2021. Please use a personal access token instead.
+remote: Please see https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/ for more information.
+fatal: Authentication failed for 'https://github.com/shan5a6/dvsbatch3.git/'
+[root@git dvsbatch3]#
+
